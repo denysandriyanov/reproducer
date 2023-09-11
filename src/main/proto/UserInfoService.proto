@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package userinfo;
+
+import "UserInfoRequest.proto";
+import "UserInfoResponse.proto";
+
+service UserInfoService {
+  rpc GetUserInfo (UserInfoRequest) returns (UserInfoResponse);
+}

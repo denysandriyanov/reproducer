@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package userinfo;
+
+message UserAddress {
+  string street_address = 1;
+  string region = 2;
+  string country = 3;
+  string postal_code = 4;
+  string locality = 5;
+}
+
+message UserInfoResponse {
+  string name = 1;
+  string given_name = 2;
+  string family_name = 3;
+  string nickname = 4;
+  string preferred_username = 5;
+  string profile = 6;
+  string picture = 7;
+  string website = 8;
+  string gender = 9;
+  string birthdate = 10;
+  string zoneinfo = 11;
+  string locale = 12;
+  string email = 13;
+  bool email_verified = 14;
+  string phone_number = 15;
+  bool phone_number_verified = 16;
+  UserAddress address = 17;
+  string metadata = 18;
+
+  string sub = 19;
+  UserStatus status = 20;
+  repeated string rls = 21;
+  string tid = 22;
+}
+
+enum UserStatus {
+  NEW = 0;
+  EMAIL_VERIFIED = 1;
+  DISABLED = 2;
+}
